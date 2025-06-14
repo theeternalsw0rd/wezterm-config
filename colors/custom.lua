@@ -1,14 +1,14 @@
 -- An altered version of tokyonight_night
 -- stylua: ignore
 local tokyonight = {
-   lilac = rgb(215, 193, 244),
-   dark_lilac = rgb(32, 24, 35),
-   violet = rgb(59, 39, 86),
-   fuscia = rgb(255, 102, 219),
-   puce = rgb(51, 40, 63),
-   rosewater = rgb(245, 220, 227),
-   midnight = rgba(16, 5, 21, 0.9),
-   peach = rgb(250, 179, 135)
+   lilac = 'rgb(215, 193, 244)',
+   dark_lilac = 'rgb(32, 24, 35)',
+   violet = 'rgb(59, 39, 86)',
+   fuscia = 'rgb(255, 102, 219)',
+   puce = 'rgb(51, 40, 63)',
+   rosewater = 'rgb(245, 220, 227)',
+   midnight = 'rgb(16, 5, 21)',
+   peach = 'rgb(250, 179, 135)'
 }
 
 local colorscheme = {
@@ -20,24 +20,24 @@ local colorscheme = {
    selection_bg = tokyonight.violet,
    selection_fg = tokyonight.lilac,
    ansi = {
-      rgb(21, 22, 30), -- black
-      rgb(247, 118, 142), -- red
-      rgb(158, 206, 106), -- green
-      rgb(224, 175, 104), -- yellow
-      rgb(122, 162, 247), -- blue
-      rgb(187, 154, 247), -- magenta/purple
-      rgb(125, 207, 255), -- cyan
-      rgb(169, 177, 214), -- white
+      'rgb(21, 22, 30)', -- black
+      'rgb(247, 118, 142)', -- red
+      'rgb(158, 206, 106)', -- green
+      'rgb(224, 175, 104)', -- yellow
+      'rgb(122, 162, 247)', -- blue
+      'rgb(187, 154, 247)', -- magenta/purple
+      'rgb(125, 207, 255)', -- cyan
+      'rgb(169, 177, 214)', -- white
    },
    brights = {
-      rgb(65, 72, 104), -- black
-      rgb(255, 137, 157), -- red
-      rgb(159, 224, 68), -- green
-      rgb(250, 186, 74), -- yellow
-      rgb(141, 176, 255), -- blue
-      rgb(199, 169, 255), -- magenta/purple
-      rgb(164, 218, 255), -- cyan
-      rgb(192, 202, 245), -- white
+      'rgb(65, 72, 104)', -- black
+      'rgb(255, 137, 157)', -- red
+      'rgb(159, 224, 68)', -- green
+      'rgb(250, 186, 74)', -- yellow
+      'rgb(141, 176, 255)', -- blue
+      'rgb(199, 169, 255)', -- magenta/purple
+      'rgb(164, 218, 255)', -- cyan
+      'rgb(192, 202, 245)', -- white
    },
    tab_bar = {
       background = tokyonight.midnight,
