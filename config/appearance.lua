@@ -1,5 +1,4 @@
 local gpu_adapters = require('utils.gpu-adapter')
-local backdrops = require('utils.backdrops')
 local colors = require('colors.custom')
 
 return {
@@ -9,7 +8,8 @@ return {
    webgpu_preferred_adapter = gpu_adapters:pick_best(),
    -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Dx12', 'IntegratedGpu'),
    -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Gl', 'Other'),
-   underline_thickness = '1.5pt',
+   underline_thickness = 3,
+   underline_position = -4,
 
    -- cursor
    animation_fps = 120,
@@ -22,7 +22,7 @@ return {
    colors = colors,
 
    -- background
-   background = backdrops:initial_options(false), -- set to true if you want wezterm to start on focus mode
+   window_background_opacity = 0.9,
 
    -- scrollbar
    enable_scroll_bar = true,

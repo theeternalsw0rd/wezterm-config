@@ -1,94 +1,76 @@
--- A slightly altered version of catppucchin mocha
+-- An altered version of tokyonight_night
 -- stylua: ignore
-local mocha = {
-   rosewater = '#f5e0dc',
-   flamingo  = '#f2cdcd',
-   pink      = '#f5c2e7',
-   mauve     = '#cba6f7',
-   red       = '#f38ba8',
-   maroon    = '#eba0ac',
-   peach     = '#fab387',
-   yellow    = '#f9e2af',
-   green     = '#a6e3a1',
-   teal      = '#94e2d5',
-   sky       = '#89dceb',
-   sapphire  = '#74c7ec',
-   blue      = '#89b4fa',
-   lavender  = '#b4befe',
-   text      = '#cdd6f4',
-   subtext1  = '#bac2de',
-   subtext0  = '#a6adc8',
-   overlay2  = '#9399b2',
-   overlay1  = '#7f849c',
-   overlay0  = '#6c7086',
-   surface2  = '#585b70',
-   surface1  = '#45475a',
-   surface0  = '#313244',
-   base      = '#1f1f28',
-   mantle    = '#181825',
-   crust     = '#11111b',
+local tokyonight = {
+   lilac = rgb(215, 193, 244),
+   dark_lilac = rgb(32, 24, 35),
+   violet = rgb(59, 39, 86),
+   fuscia = rgb(255, 102, 219),
+   puce = rgb(51, 40, 63),
+   rosewater = rgb(245, 220, 227),
+   midnight = rgba(16, 5, 21, 0.9),
+   peach = rgb(250, 179, 135)
 }
 
 local colorscheme = {
-   foreground = mocha.text,
-   background = mocha.base,
-   cursor_bg = mocha.rosewater,
-   cursor_border = mocha.rosewater,
-   cursor_fg = mocha.crust,
-   selection_bg = mocha.surface2,
-   selection_fg = mocha.text,
+   foreground = tokyonight.lilac,
+   background = tokyonight.dark_lilac,
+   cursor_bg = tokyonight.lilac,
+   cursor_border = tokyonight.lilac,
+   cursor_fg = tokyonight.dark_lilac,
+   selection_bg = tokyonight.violet,
+   selection_fg = tokyonight.lilac,
    ansi = {
-      '#0C0C0C', -- black
-      '#C50F1F', -- red
-      '#13A10E', -- green
-      '#C19C00', -- yellow
-      '#0037DA', -- blue
-      '#881798', -- magenta/purple
-      '#3A96DD', -- cyan
-      '#CCCCCC', -- white
+      rgb(21, 22, 30), -- black
+      rgb(247, 118, 142), -- red
+      rgb(158, 206, 106), -- green
+      rgb(224, 175, 104), -- yellow
+      rgb(122, 162, 247), -- blue
+      rgb(187, 154, 247), -- magenta/purple
+      rgb(125, 207, 255), -- cyan
+      rgb(169, 177, 214), -- white
    },
    brights = {
-      '#767676', -- black
-      '#E74856', -- red
-      '#16C60C', -- green
-      '#F9F1A5', -- yellow
-      '#3B78FF', -- blue
-      '#B4009E', -- magenta/purple
-      '#61D6D6', -- cyan
-      '#F2F2F2', -- white
+      rgb(65, 72, 104), -- black
+      rgb(255, 137, 157), -- red
+      rgb(159, 224, 68), -- green
+      rgb(250, 186, 74), -- yellow
+      rgb(141, 176, 255), -- blue
+      rgb(199, 169, 255), -- magenta/purple
+      rgb(164, 218, 255), -- cyan
+      rgb(192, 202, 245), -- white
    },
    tab_bar = {
-      background = 'rgba(0, 0, 0, 0.4)',
+      background = tokyonight.midnight,
       active_tab = {
-         bg_color = mocha.surface2,
-         fg_color = mocha.text,
+         bg_color = tokyonight.violet,
+         fg_color = tokyonight.lilac,
       },
       inactive_tab = {
-         bg_color = mocha.surface0,
-         fg_color = mocha.subtext1,
+         bg_color = tokyonight.dark_lilac,
+         fg_color = tokyonight.lilac,
       },
       inactive_tab_hover = {
-         bg_color = mocha.surface0,
-         fg_color = mocha.text,
+         bg_color = tokyonight.puce,
+         fg_color = tokyonight.fuscia,
       },
       new_tab = {
-         bg_color = mocha.base,
-         fg_color = mocha.text,
+         bg_color = tokyonight.violet,
+         fg_color = tokyonight.lilac,
       },
       new_tab_hover = {
-         bg_color = mocha.mantle,
-         fg_color = mocha.text,
+         bg_color = tokyonight.dark_lilac,
+         fg_color = tokyonight.rosewater,
          italic = true,
       },
    },
-   visual_bell = mocha.red,
+   visual_bell = tokyonight.rosewater,
    indexed = {
-      [16] = mocha.peach,
-      [17] = mocha.rosewater,
+      [16] = tokyonight.peach,
+      [17] = tokyonight.rosewater,
    },
-   scrollbar_thumb = mocha.surface2,
-   split = mocha.overlay0,
-   compose_cursor = mocha.flamingo,
+   scrollbar_thumb = tokyonight.puce,
+   split = tokyonight.lilac,
+   compose_cursor = tokyonight.fuscia,
 }
 
 return colorscheme
