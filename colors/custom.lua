@@ -1,14 +1,13 @@
 -- An altered version of tokyonight_night
 -- stylua: ignore
 local tokyonight = {
-   lilac = 'rgb(215, 193, 244)',
-   dark_lilac = 'rgb(32, 24, 35)',
-   violet = 'rgb(59, 39, 86)',
-   fuscia = 'rgb(255, 102, 219)',
-   puce = 'rgb(51, 40, 63)',
-   rosewater = 'rgb(245, 220, 227)',
-   midnight = 'rgb(16, 5, 21)',
-   peach = 'rgb(250, 179, 135)'
+   lilac = '#d7c1f4',
+   dark_lilac = '#201823',
+   violet = '#3b2756',
+   fuscia = '#ff66db',
+   puce = '#33283f',
+   rosewater = '#f5dce3',
+   midnight = '#100515',
 }
 
 local colorscheme = {
@@ -20,24 +19,24 @@ local colorscheme = {
    selection_bg = tokyonight.violet,
    selection_fg = tokyonight.lilac,
    ansi = {
-      'rgb(21, 22, 30)', -- black
-      'rgb(247, 118, 142)', -- red
-      'rgb(158, 206, 106)', -- green
-      'rgb(224, 175, 104)', -- yellow
-      'rgb(122, 162, 247)', -- blue
-      'rgb(187, 154, 247)', -- magenta/purple
-      'rgb(125, 207, 255)', -- cyan
-      'rgb(169, 177, 214)', -- white
+      '#15161e', -- black
+      '#f7768e', -- red
+      '#9ece6a', -- green
+      '#e0af68', -- yellow
+      '#7aa2f7', -- blue
+      '#bb9af7', -- magenta/purple
+      '#7dcfff', -- cyan
+      '#a9b1d6', -- white
    },
    brights = {
-      'rgb(65, 72, 104)', -- black
-      'rgb(255, 137, 157)', -- red
-      'rgb(159, 224, 68)', -- green
-      'rgb(250, 186, 74)', -- yellow
-      'rgb(141, 176, 255)', -- blue
-      'rgb(199, 169, 255)', -- magenta/purple
-      'rgb(164, 218, 255)', -- cyan
-      'rgb(192, 202, 245)', -- white
+      '#414868', -- black
+      '#ff899d', -- red
+      '#9fe044', -- green
+      '#faba4a', -- yellow
+      '#8db0ff', -- blue
+      '#c7a9ff', -- magenta/purple
+      '#a4daff', -- cyan
+      '#c0caf5', -- white
    },
    tab_bar = {
       background = tokyonight.midnight,
@@ -50,8 +49,8 @@ local colorscheme = {
          fg_color = tokyonight.lilac,
       },
       inactive_tab_hover = {
-         bg_color = tokyonight.puce,
-         fg_color = tokyonight.fuscia,
+         bg_color = tokyonight.dark_lilac,
+         fg_color = tokyonight.rosewater,
       },
       new_tab = {
          bg_color = tokyonight.violet,
@@ -60,12 +59,11 @@ local colorscheme = {
       new_tab_hover = {
          bg_color = tokyonight.dark_lilac,
          fg_color = tokyonight.rosewater,
-         italic = true,
       },
    },
    visual_bell = tokyonight.rosewater,
    indexed = {
-      [16] = tokyonight.peach,
+      [16] = tokyonight.lilac,
       [17] = tokyonight.rosewater,
    },
    scrollbar_thumb = tokyonight.puce,

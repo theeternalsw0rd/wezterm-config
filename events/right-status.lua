@@ -2,6 +2,7 @@ local wezterm = require('wezterm')
 local umath = require('utils.math')
 local Cells = require('utils.cells')
 local OptsValidator = require('utils.opts-validator')
+local colorscheme = require('colors.custom')
 
 ---@alias Event.RightStatusOptions { date_format?: string }
 
@@ -56,9 +57,9 @@ local charging_icons = {
 ---@type table<string, Cells.SegmentColors>
 -- stylua: ignore
 local colors = {
-   date      = { fg = '#fab387', bg = 'rgba(0, 0, 0, 0.4)' },
-   battery   = { fg = '#f9e2af', bg = 'rgba(0, 0, 0, 0.4)' },
-   separator = { fg = '#74c7ec', bg = 'rgba(0, 0, 0, 0.4)' }
+   date      = { fg = colorscheme.foreground, bg = colorscheme.tab_bar.background },
+   battery   = { fg = colorscheme.foreground, bg = colorscheme.tab_bar.background },
+   separator = { fg = colorscheme.foreground, bg = colorscheme.tab_bar.background }
 }
 
 local cells = Cells:new()

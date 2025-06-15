@@ -1,6 +1,23 @@
 local gpu_adapters = require('utils.gpu-adapter')
 local colors = require('colors.custom')
 
+local wezterm = require 'wezterm'
+
+wezterm.on(
+  'format-tab-title',
+  function(tab, tabs, panes, config, hover, max_width)
+    local title = tab_title(tab)
+    if tab.is_active then
+      return {
+        { Background = { Color = colors.tab_bar.active_tab.bg_color } },
+        { Foreground = { Color = colors.tab_bar.active_tab.fg_color } },
+        { Text = ' ' .. title .. ' ' },
+      }
+    end
+    return title
+  end
+)
+
 return {
    max_fps = 120,
    front_end = 'WebGpu',
@@ -22,7 +39,8 @@ return {
    colors = colors,
 
    -- background
-   window_background_opacity = 0.9,
+   -- controlled by os instead
+   -- window_background_opacity = 0.9,
 
    -- scrollbar
    enable_scroll_bar = true,
@@ -36,6 +54,7 @@ return {
    switch_to_last_active_tab_when_closing_tab = true,
 
    -- window
+   window_decorations = 'NONE',
    window_padding = {
       left = 0,
       right = 0,

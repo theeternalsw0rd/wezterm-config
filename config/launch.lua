@@ -2,7 +2,7 @@ local platform = require('utils.platform')
 
 local options = {
    default_prog = {},
-   launch_menu = {},
+   launch_menu = {}
 }
 
 if platform.is_win then
@@ -12,7 +12,6 @@ if platform.is_win then
       { label = 'PowerShell Desktop', args = { 'powershell' } },
       { label = 'Command Prompt', args = { 'cmd' } },
       { label = 'Nushell', args = { 'nu' } },
-      { label = 'ArchLinux', args = { 'wsl ', '--disbribution', 'archlinux'} }
    }
 elseif platform.is_mac then
    options.default_prog = { 'zsh', '-l' }
