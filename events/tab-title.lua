@@ -5,6 +5,7 @@
 local wezterm = require('wezterm')
 local Cells = require('utils.cells')
 local OptsValidator = require('utils.opts-validator')
+local colorscheme = require('colors.custom')
 
 ---
 -- =======================================
@@ -42,13 +43,13 @@ local nf = wezterm.nerdfonts
 local M = {}
 
 local GLYPH_SCIRCLE_LEFT = nf.ple_left_half_circle_thick --[[  ]]
-local GLYPH_SCIRCLE_RIGHT = nf.ple_right_half_circle_thick --[[  ]]
+local GLYPH_SCIRCLE_RIGHT = nf.ple_right_half_circle_thick .. ' '--[[  ]]
 local GLYPH_CIRCLE = nf.fa_circle --[[  ]]
 local GLYPH_ADMIN = nf.md_shield_half_full --[[ 󰞀 ]]
 local GLYPH_LINUX = nf.cod_terminal_linux --[[  ]]
 local GLYPH_DEBUG = nf.fa_bug --[[  ]]
--- local GLYPH_SEARCH = nf.fa_search --[[  ]]
-local GLYPH_SEARCH = '🔭'
+local GLYPH_SEARCH = nf.fa_search --[[  ]]
+-- local GLYPH_SEARCH = '🔭'
 
 local GLYPH_UNSEEN_NUMBERED_BOX = {
    [1] = nf.md_numeric_1_box_multiple, --[[ 󰼏 ]]
@@ -94,17 +95,17 @@ local RENDER_VARIANTS = {
 ---@type table<string, Cells.SegmentColors>
 -- stylua: ignore
 local colors = {
-   text_default          = { bg = '#45475A', fg = '#1C1B19' },
-   text_hover            = { bg = '#5D87A3', fg = '#1C1B19' },
-   text_active           = { bg = '#74c7ec', fg = '#11111B' },
+   text_default          = { bg = colorscheme.tab_bar.inactive_tab.bg_color, fg = colorscheme.tab_bar.inactive_tab.fg_color },
+   text_hover            = { bg = colorscheme.tab_bar.new_tab_hover.bg_color, fg = colorscheme.tab_bar.new_tab_hover.fg_color },
+   text_active           = { bg = colorscheme.tab_bar.active_tab.bg_color, fg = colorscheme.tab_bar.active_tab.fg_color },
 
-   unseen_output_default = { bg = '#45475A', fg = '#FFA066' },
-   unseen_output_hover   = { bg = '#5D87A3', fg = '#FFA066' },
-   unseen_output_active  = { bg = '#74c7ec', fg = '#FFA066' },
+   unseen_output_default = { bg = colorscheme.tab_bar.inactive_tab.bg_color, fg = colorscheme.fuscia },
+   unseen_output_hover   = { bg = colorscheme.tab_bar.inactive_tab_hover.bg_color, fg = colorscheme.fuscia },
+   unseen_output_active  = { bg = colorscheme.tab_bar.active_tab.bg_color, fg = colorscheme.fuscia },
 
-   scircle_default       = { bg = 'rgba(0, 0, 0, 0.4)', fg = '#45475A' },
-   scircle_hover         = { bg = 'rgba(0, 0, 0, 0.4)', fg = '#5D87A3' },
-   scircle_active        = { bg = 'rgba(0, 0, 0, 0.4)', fg = '#74C7EC' },
+   scircle_default       = { bg = colorscheme.tab_bar.background, fg = colorscheme.tab_bar.inactive_tab.bg_color },
+   scircle_hover         = { bg = colorscheme.tab_bar.background, fg = colorscheme.tab_bar.inactive_tab_hover.bg_color },
+   scircle_active        = { bg = colorscheme.tab_bar.background, fg = colorscheme.tab_bar.active_tab.bg_color },
 }
 
 ---
