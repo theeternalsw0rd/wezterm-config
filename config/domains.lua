@@ -20,9 +20,10 @@ return {
       {
          name = 'WSL:ArchLinux',
          distribution = 'archlinux',
-         username = 'mbucy',
-         default_cwd = '/home/mbucy',
-         default_prog = { 'zsh', '-l' },
+      },
+      {
+         name = 'WSL:Ubuntu',
+         distribution = 'ubuntu',
       },
    },
 }
