@@ -39,7 +39,7 @@ return {
    -- window
    window_decorations = 'NONE',
    window_padding = {
-      left = 0,
+      left = 20,
       right = 0,
       top = 10,
       bottom = 7.5,
