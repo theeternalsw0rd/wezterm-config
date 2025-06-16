@@ -12,8 +12,8 @@ if platform.is_win then
       { label = 'PowerShell Desktop', args = { 'powershell' } },
       { label = 'Command Prompt', args = { 'cmd' } },
       { label = 'Nushell', args = { 'nu' } },
-      { label = 'UCRT64 / MSYS2', args = { 'msys2_shell.cmd', '-use-full-path', '-defterm', '-here', '-no-start', '-ucrt64' } },
-      { label = 'MSYS / MSYS2', args = { 'msys2_shell.cmd', '-use-full-path', '-defterm', '-here', '-no-start', '-msys' } },
+      { label = 'UCRT64 / MSYS2', args = { 'msys2_shell.cmd', '-use-full-path', '-defterm', '-here', '-no-start', '-ucrt64', '-shell', 'fish' } },
+      { label = 'MSYS / MSYS2', args = { 'msys2_shell.cmd', '-use-full-path', '-defterm', '-here', '-no-start', '-msys', '-shell', 'fish' } },
    }
 elseif platform.is_mac then
    options.default_prog = { 'zsh', '-l' }
