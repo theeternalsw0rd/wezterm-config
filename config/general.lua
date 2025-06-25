@@ -5,6 +5,7 @@ return {
    exit_behavior_messaging = 'Verbose',
    status_update_interval = 1000,
    term = 'wezterm',
+   enable_kitty_graphics = true,
 
    scrollback_lines = 20000,
 
