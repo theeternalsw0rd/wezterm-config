@@ -12,6 +12,7 @@ if platform.is_win then
       { label = 'PowerShell Desktop', args = { 'powershell' } },
       { label = 'Command Prompt', args = { 'cmd' } },
       { label = 'Nushell', args = { 'nu' } },
+      { label = 'Cygwin', args = { 'C:\\cygwin64\\bin\\fish.exe', '--login', '-i' } },
       { label = 'UCRT64 / MSYS2', args = { 'msys2_shell.cmd', '-use-full-path', '-defterm', '-here', '-no-start', '-ucrt64', '-shell', 'fish' } },
       { label = 'MSYS / MSYS2', args = { 'msys2_shell.cmd', '-use-full-path', '-defterm', '-here', '-no-start', '-msys', '-shell', 'fish' } },
    }
