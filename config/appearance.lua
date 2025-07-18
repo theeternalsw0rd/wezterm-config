@@ -1,13 +1,9 @@
 local gpu_adapters = require('utils.gpu-adapter')
+local platform = require('utils.platform')
 local colors = require('colors.custom')
 
-return {
+local options = {
    max_fps = 120,
-   front_end = 'WebGpu',
-   webgpu_power_preference = 'HighPerformance',
-   webgpu_preferred_adapter = gpu_adapters:pick_best(),
-   -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Dx12', 'IntegratedGpu'),
-   -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Gl', 'Other'),
    underline_thickness = 3,
    underline_position = -4,
 
@@ -68,3 +64,16 @@ return {
       target = 'CursorColor',
    },
 }
+
+if platform.is_linux {
+   options.front_end = 'OpenGL'
+   options.enable_wayland = true
+} else {
+   options.front_end = 'WebGpu',
+   options.webgpu_power_preference = 'HighPerformance'
+   options.webgpu_preferred_adapter = gpu_adapters:pick_best()
+   -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Dx12', 'IntegratedGpu')
+   -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Gl', 'Other')
+}
+
+return options
