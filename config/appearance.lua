@@ -65,15 +65,15 @@ local options = {
    },
 }
 
-if platform.is_linux {
+if platform.is_linux then
    options.front_end = 'OpenGL'
    options.enable_wayland = true
-} else {
-   options.front_end = 'WebGpu',
+else
+   options.front_end = 'WebGpu'
    options.webgpu_power_preference = 'HighPerformance'
    options.webgpu_preferred_adapter = gpu_adapters:pick_best()
    -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Dx12', 'IntegratedGpu')
    -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Gl', 'Other')
-}
+end
 
 return options
