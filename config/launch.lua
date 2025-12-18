@@ -16,13 +16,13 @@ if platform.is_win then
     { label = 'MSYS / MSYS2',       args = { 'msys2_shell.cmd', '-use-full-path', '-defterm', '-here', '-no-start', '-msys', '-shell', 'fish' } },
   }
 elseif platform.is_mac then
-  options.default_prog = { 'fish', '-l' }
+  options.default_prog = { '/opt/homebrew/bin/fish', '-l' }
   options.launch_menu = {
     { label = 'Bash',            args = { 'bash', '-l' } },
-    { label = 'Fish',            args = { 'fish', '-l' } },
+    { label = 'Fish',            args = { '/opt/homebrew/bin/fish', '-l' } },
     { label = 'Nushell',         args = { '/opt/homebrew/bin/nu', '-l' } },
     { label = 'Zsh',             args = { 'zsh', '-l' } },
-    { label = 'PowerShell Core', args = { 'pwsh', '-NoLogo' } },
+    { label = 'PowerShell Core', args = { '/usr/local/bin/pwsh', '-NoLogo' } },
   }
 elseif platform.is_linux then
   options.default_prog = { 'fish', '-l' }

@@ -1,3 +1,20 @@
+local platform = require('utils.platform')
+
+local wsl_domains = {}
+
+if platform.is_win then
+   wsl_domains = {
+      {
+         name = 'WSL:ArchLinux',
+         distribution = 'archlinux',
+      },
+      {
+         name = 'WSL:Ubuntu',
+         distribution = 'ubuntu',
+      },
+   }
+end
+
 return {
    -- ref: https://wezfurlong.org/wezterm/config/lua/SshDomain.html
    -- ssh_domains = {},
@@ -16,14 +33,5 @@ return {
    unix_domains = {},
 
    -- ref: https://wezfurlong.org/wezterm/config/lua/WslDomain.html
-   wsl_domains = {
-      {
-         name = 'WSL:ArchLinux',
-         distribution = 'archlinux',
-      },
-      {
-         name = 'WSL:Ubuntu',
-         distribution = 'ubuntu',
-      },
-   },
+   wsl_domains = wsl_domains,
 }

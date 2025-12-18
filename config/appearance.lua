@@ -65,6 +65,12 @@ local options = {
    },
 }
 
+if platform.is_mac then
+   options.window_decorations = 'RESIZE'
+   options.front_end = 'Metal'
+   options.window_background_opacity = 0.9
+end
+
 if platform.is_linux then
    options.front_end = 'OpenGL'
    options.enable_wayland = true
