@@ -42,11 +42,11 @@ local options = {
    },
    adjust_window_size_when_changing_font_size = false,
    window_close_confirmation = 'NeverPrompt',
-   window_frame = {
-      active_titlebar_bg = '#090909',
+   -- window_frame = {
+      -- active_titlebar_bg = '#090909',
       -- font = fonts.font,
       -- font_size = fonts.font_size,
-   },
+   -- },
    -- inactive_pane_hsb = {
    --    saturation = 0.9,
    --    brightness = 0.65,
@@ -79,6 +79,8 @@ else
    options.webgpu_preferred_adapter = gpu_adapters:pick_best()
    -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Dx12', 'IntegratedGpu')
    -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Gl', 'Other')
+   -- windows-terminal-quake controls window size and position and maximized windows have gaps with RESIZE
+   options.window_decorations = 'NONE'
 end
 
 return options
