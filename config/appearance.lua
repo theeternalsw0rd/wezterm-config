@@ -33,7 +33,7 @@ local options = {
    switch_to_last_active_tab_when_closing_tab = true,
 
    -- window
-   window_decorations = 'NONE',
+   window_decorations = 'RESIZE',
    window_padding = {
       left = 20,
       right = 0,
@@ -66,7 +66,6 @@ local options = {
 }
 
 if platform.is_mac then
-   options.window_decorations = 'RESIZE'
    options.front_end = 'Metal'
    options.window_background_opacity = 0.9
 end
