@@ -28,10 +28,9 @@ function Config:append(new_options)
             'Duplicate config option detected: ',
             { old = self.options[k], new = new_options[k] }
          )
-         goto continue
+      else
+         self.options[k] = v
       end
-      self.options[k] = v
-      ::continue::
    end
    return self
 end
