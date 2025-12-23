@@ -13,6 +13,7 @@ if platform.is_win then
     { label = 'Command Prompt',     args = { 'cmd' } },
     { label = 'Nushell',            args = { 'nu' } },
     { label = 'Xonsh',              args = { 'pwsh', '-NoProfile', '-Command', 'xonsh' } },
+    { label = 'Elvish',             args = { 'elvish' } },
     { label = 'WSL Xonsh',          args = { 'wsl', 'xonsh' } },
     { label = 'Git Bash',           args = { 'C:\\Program Files\\Git\\bin\\bash.exe', '--login', '-i' } },
     { label = 'UCRT64 / MSYS2',     args = { 'msys2_shell.cmd', '-use-full-path', '-defterm', '-here', '-no-start', '-ucrt64', '-shell', 'fish' } },
@@ -24,6 +25,8 @@ elseif platform.is_mac then
     { label = 'Bash',            args = { 'bash', '-l' } },
     { label = 'Fish',            args = { '/opt/homebrew/bin/fish', '-l' } },
     { label = 'Nushell',         args = { '/opt/homebrew/bin/nu', '-l' } },
+    { label = 'Xonsh',           args = { '/opt/homebrew/bin/fish', '-c', 'xonsh' } },
+    { label = 'Elvish',          args = { '/opt/homebrew/bin/fish', '-c', 'elvish' } },
     { label = 'Zsh',             args = { 'zsh', '-l' } },
     { label = 'PowerShell Core', args = { '/usr/local/bin/pwsh', '-NoLogo' } },
   }
@@ -33,6 +36,8 @@ elseif platform.is_linux then
     { label = 'Bash',            args = { 'bash', '-l' } },
     { label = 'Fish',            args = { 'fish', '-l' } },
     { label = 'Nushell',         args = { 'nu', '-l' } },
+    { label = 'Xonsh',           args = { 'fish', '-c', 'xonsh' } },
+    { label = 'Elvish',          args = { 'fish', '-c', 'elvish' } },
     { label = 'Zsh',             args = { 'zsh', '-l' } },
     { label = 'PowerShell Core', args = { 'pwsh', '-NoLogo' } },
   }
