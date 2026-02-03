@@ -80,7 +80,9 @@ else
    -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Dx12', 'IntegratedGpu')
    -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Gl', 'Other')
    -- windows-terminal-quake controls window size and position and maximized windows have gaps with RESIZE
-   options.window_decorations = 'NONE'
+   if platform.is_win then
+      options.window_decorations = 'NONE'
+   end
 end
 
 return options
